@@ -23,3 +23,5 @@ Imports:
     rlang
 Remotes:
     Genentech/rd2markdown
+URL: https://github.com/simonpcouch/pkgprompt
+BugReports: https://github.com/simonpcouch/pkgprompt/issues
