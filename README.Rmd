@@ -1,0 +1,47 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# pkgprompt
+
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![CRAN status](https://www.r-pkg.org/badges/version/pkgprompt)](https://CRAN.R-project.org/package=pkgprompt)
+<!-- badges: end -->
+
+Information in a large language model's prompt is analogous to its short-term memory; models will provide more informative answers on problem contexts that they've been prompted on, even if the same information was in the training data. This package converts R package documentation to LLM-readable plain text to facilitate passing it as part of a prompt.
+    
+## Installation
+
+You can install the development version of pkgprompt like so:
+
+``` r
+pak::pak("simonpcouch/pkgprompt")
+```
+
+## Example
+
+Pass the name of a package to grab all of its documentation as plain text:
+
+```{r example}
+library(pkgprompt)
+
+pkg_prompt(pkg = "splines")
+```
+
+You can optionally include only a subset of topics in the package in the results:
+
+```{r example-topic}
+pkg_prompt(pkg = "splines", topics = c("ns", "bs"))
+```

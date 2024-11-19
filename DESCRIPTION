@@ -1,0 +1,25 @@
+Package: pkgprompt
+Title: Convert package documentation to LLM-readable plain text
+Version: 0.0.1
+Authors@R: 
+    person("Simon", "Couch", , "simon.couch@posit.co", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-5676-5107"))
+Description: Information in a large language model's prompt is analogous to 
+    its short-term memory; models will provide more informative answers
+    on problem contexts that they've been prompted on, even if the same 
+    information was in the training data. This package converts R package 
+    documentation to LLM-readable plain text to facilitate passing it as part 
+    of a prompt.
+License: MIT + file LICENSE
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports: 
+    cli,
+    rd2markdown,
+    rlang
+Remotes:
+    Genentech/rd2markdown
