@@ -21,6 +21,10 @@ knitr::opts_chunk$set(
 <!-- badges: end -->
 
 Information in a large language model's prompt is analogous to its short-term memory; models will provide more informative answers on problem contexts that they've been prompted on, even if the same information was in the training data. This package converts R package documentation to LLM-readable plain text to facilitate passing it as part of a prompt.
+
+> IMPORTANT
+>
+> **This package has been superseded by [btw](https://github.com/posit-dev/btw).** Use e.g. `btw::btw("{splines}")` for analogous results.
     
 ## Installation
 
